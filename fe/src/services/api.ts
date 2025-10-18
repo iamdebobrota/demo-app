@@ -1,4 +1,4 @@
-const API_BASE_URL = `http://localhost:${import.meta.env.VITE_APP_PORT}/api`;
+const API_BASE_URL = import.meta.env.VITE_APP_PORT;
 
 export interface Rental {
   id: string;
@@ -137,6 +137,7 @@ class ApiService {
   }
 
   // Get rental statistics
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async getRentalStats(): Promise<{ success: boolean; data: any }> {
     return this.request("/rentals/stats");
   }
