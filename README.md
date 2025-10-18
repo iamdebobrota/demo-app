@@ -66,3 +66,5 @@ github actions - https://docs.github.com/en/actions/how-tos/deploy/configure-and
 
 
 deploy the BE on render - https://www.notion.so/Deploying-JSON-Server-on-render-com-Heroku-Alternative-1-1f5339c8667640d0a8161a84bdc0f457
+
+CI/CD using github action - https://github.blog/enterprise-software/ci-cd/build-ci-cd-pipeline-github-actions-four-steps/
