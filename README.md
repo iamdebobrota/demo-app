@@ -65,3 +65,4 @@ Checkout branch - `git checkout feat/init`
 github actions - https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/control-deployments
 
 
+deploy the BE on render - https://www.notion.so/Deploying-JSON-Server-on-render-com-Heroku-Alternative-1-1f5339c8667640d0a8161a84bdc0f457
