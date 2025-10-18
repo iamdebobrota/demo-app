@@ -30,3 +30,25 @@ web based platform and histing service for version control like git.
 
 `git config --global user.name "demousername"`
 `git config --global user.email "demo_user_email"`
+
+---
+
+- ls - lists the contents of dir
+- pwd - prints the current working dir
+- cp - copies files or dir
+- mv - moves or rename files or directories
+- rm - removes or deletes files or dir with the `-rf` command
+- `rm -rf node_modules` - delete the dir
+- mkdir - create a new dir
+- rmdir - removes an empty dir
+- touch - create an empty file
+- cd - changing dir
+- cd /usr/bin - absolute path
+- cd .. - moving the previous dir
+- `cd ./bin` or `cd bin` - relative path
+- `cd` or `cd ~` home dir
+- `cd -` previous working dir
+- `ls -a` - hidden files and folders
+- `ls -l` - show the details info in columns
+
+### Write the good commit message - https://github.com/joelparkerhenderson/git-commit-message
