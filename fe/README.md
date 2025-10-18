@@ -1,73 +1,145 @@
-# React + TypeScript + Vite
+# Rental App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React frontend for the Rental App built with TypeScript, Tailwind CSS, and shadcn/ui components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ **Full CRUD Operations**: Create, Read, Update, Delete rental properties
+- ✅ **Search & Filter**: Search by title/location, filter by type, price range, bedrooms
+- ✅ **Responsive Design**: Mobile-first design with Tailwind CSS
+- ✅ **Modern UI**: Beautiful components using shadcn/ui
+- ✅ **Real-time Statistics**: Dashboard with rental statistics
+- ✅ **Form Validation**: Client-side validation for all forms
+- ✅ **Error Handling**: Comprehensive error handling and user feedback
+- ✅ **Loading States**: Smooth loading indicators
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** with TypeScript
+- **Tailwind CSS** for styling
+- **shadcn/ui** for UI components
+- **Radix UI** for accessible primitives
+- **Lucide React** for icons
+- **Vite** for build tooling
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v18 or higher)
+- npm or yarn
+- Backend server running on `http://localhost:5000`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Install dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The app will be available at `http://localhost:5173`
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+## API Integration
+
+The frontend communicates with the backend API through the `apiService` in `src/services/api.ts`. Make sure your backend server is running on port 5000.
+
+## Components
+
+### Main Components
+
+- **App.tsx**: Main application component with state management
+- **RentalCard**: Individual rental property card with actions
+- **RentalForm**: Form for creating/editing rentals
+- **API Service**: Centralized API communication
+
+### UI Components (shadcn/ui)
+
+- Button, Card, Input, Select, Dialog, Badge
+- All components are fully customizable and accessible
+
+## Features Overview
+
+### Dashboard
+
+- Statistics cards showing total rentals, available properties, average price, and price range
+- Real-time updates when data changes
+
+### Search & Filter
+
+- Search by property title or location
+- Filter by property type (apartment, house, condo, studio)
+- Filter by price range (min/max)
+- Clear all filters option
+
+### Rental Management
+
+- **Create**: Add new rental properties with full details
+- **Read**: View all rentals in a responsive grid layout
+- **Update**: Edit existing rental properties
+- **Delete**: Remove rental properties with confirmation
+
+### Property Details
+
+- Title, description, location
+- Price, type, bedrooms, bathrooms, area
+- Amenities list
+- Property images
+- Landlord contact information
+- Availability status
+
+## Responsive Design
+
+The app is fully responsive and works on:
+
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
+
+## Error Handling
+
+- Network error handling
+- Form validation errors
+- User-friendly error messages
+- Loading states for better UX
+
+## Development
+
+### Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/           # shadcn/ui components
+│   ├── RentalCard.tsx
+│   └── RentalForm.tsx
+├── services/
+│   └── api.ts        # API service
+├── lib/
+│   └── utils.ts      # Utility functions
+├── App.tsx           # Main app component
+└── main.tsx          # App entry point
+```
+
+### Adding New Features
+
+1. Create new components in `src/components/`
+2. Add API methods in `src/services/api.ts`
+3. Update types in the API service
+4. Integrate with the main App component
+
+## License
+
+ISC
