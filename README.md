@@ -52,3 +52,7 @@ web based platform and histing service for version control like git.
 - `ls -l` - show the details info in columns
 
 ### Write the good commit message - https://github.com/joelparkerhenderson/git-commit-message
+
+Checkout and create a new branch - `git checkout -b feat/init`
+To create a new branch `git branch branch_name`
+Checkout branch - `git checkout feat/init`
